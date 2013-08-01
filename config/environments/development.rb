@@ -9,6 +9,9 @@ Wsgw::Application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # Log error messages when you accidentally call methods on nil.
+  # config.whiny_nils = true
+
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
@@ -19,6 +22,9 @@ Wsgw::Application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
+  # Only use best-standards-support built into browsers
+  config.action_dispatch.best_standards_support = :builtin
+  
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
 
@@ -26,4 +32,6 @@ Wsgw::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  
+  config.assets.compress = false
 end
